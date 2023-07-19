@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>Wprowadź dane formularza</h2>
+  <form (ngSubmit)="onSubmit()" class="mb-3">
+    <div class="form-group">
+      <label for="currencyCode">Kod waluty:</label>
+      <input type="text" class="form-control" id="currencyCode" [(ngModel)]="currencyCode" name="currencyCode" required>
+    </div>
+    <div class="form-group">
+      <label for="userName">Nazwa użytkownika:</label>
+      <input type="text" class="form-control" id="userName" [(ngModel)]="userName" name="userName" required>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Wyślij</button>
+  </form>
+  <button class="btn btn-secondary" [routerLink]="'/requests'">Zobacz zapisane żądania</button>
+</div>

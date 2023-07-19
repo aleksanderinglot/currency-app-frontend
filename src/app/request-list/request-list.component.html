@@ -1,0 +1,13 @@
+<div class="container">
+  <h2 class="my-4">Lista zapisanych żądań</h2>
+  <ul class="list-group">
+    <li *ngFor="let request of requests" class="list-group-item mb-3">
+      <div>Kod waluty: {{ request.currency }}</div>
+      <div>Nazwa użytkownika: {{ request.name }}</div>
+      <div>Data: {{ request.date | date }}</div>
+      <div>Wartość: {{ request.currencyValue }}</div>
+    </li>
+  </ul>
+  <button class="btn btn-primary mt-3" routerLink="/">Powrót do formularza</button>
+</div>
+  
